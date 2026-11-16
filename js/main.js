@@ -416,7 +416,9 @@
     // how far the net has dissolved: starts near the end of the pinned scroll, completes as the section leaves
     const sr = sides.getBoundingClientRect();
     const pinPart = VW < 760 ? 0 : smooth(0.9, 1, prog(sides));
-    const leave = clamp((VH - sr.bottom) / (VH * 0.7));
+    // phones don't pin the section and the net sits at its very bottom, so there it dissolves only as the net
+    // itself scrolls up out of view, not as soon as it is fully on screen
+    const leave = VW < 760 ? clamp((VH * 0.35 - netEl.getBoundingClientRect().bottom) / (VH * 0.35)) : clamp((VH - sr.bottom) / (VH * 0.7));
     const dz = clamp(pinPart * 0.32 + leave * 0.78);
     const lf = 1 - smooth(0.04, 0.4, dz);
     if (Math.abs(lf - labelFade) > 0.01) { labelFade = lf; tiles.forEach((t) => { $("span", t).style.opacity = lf; }); }
@@ -678,6 +680,7 @@
   const PANEL = { x: 240, y: 296 };                     // focus panel centre
   const CHIP0 = 4.25, CHIP_STEP = 0.44, CHIP_SC = 0.45; // where upcoming stops wait on the far arc, and their size
   const MILES = [2.3, 1.95, 1.6, 1.25, 0.9, 0.55];      // milestone angles along the near arc, left to right
+  const MILES_M = [1.92, 1.736, 1.552, 1.368, 1.184, 1.0]; // phones: squeezed into the stretch of orbit that is on screen
   const RING_BEADS = [3.792, Math.PI, 5.79, 0];
   const STEMS = [[275, 459, 600], [524, 502, 640], [940, 560, 655], [1228, 492, 625], [1427, 450, 598], [1462, 441, 612]];
   const ringS = (a) => [RING.cx + Math.cos(a) * RING.rx, RING.cy + Math.sin(a) * RING.ry];
@@ -890,8 +893,9 @@
 
     // ---- the lit trail: the near arc turns ember from the focus point up to the newest milestone (or the comet)
     let done = 0; for (let j = 0; j < JN; j++) if (j - g <= -1 + 1e-6) done = j + 1;
-    let trailEnd = done ? MILES[done - 1] : FOCUS, comet = -1;
-    const cj = done; if (cj < JN && cj - g < -0.5) { comet = lerp(FOCUS, MILES[cj], smooth(-0.5, -1, cj - g)); trailEnd = comet; }
+    const miles = mobile ? MILES_M : MILES;
+    let trailEnd = done ? miles[done - 1] : FOCUS, comet = -1;
+    const cj = done; if (cj < JN && cj - g < -0.5) { comet = lerp(FOCUS, miles[cj], smooth(-0.5, -1, cj - g)); trailEnd = comet; }
     if (trailEnd < FOCUS && cardsIn > 0) {
       ctx.save(); ctx.globalCompositeOperation = "lighter";
       for (let a = FOCUS; a > trailEnd; a -= 0.004) {
@@ -970,7 +974,7 @@
     if (cardsIn > 0) {
       ctx.font = `500 ${Math.max(8, 9.5 * s).toFixed(1)}px "Geist Mono", ui-monospace, monospace`; ctx.textAlign = "center";
       for (let j = 0; j < JN; j++) {
-        const [x, y] = ringXY(MILES[j]), o = j - g, lit = o <= -0.999, open = j === jrActive && !lit;
+        const [x, y] = ringXY(miles[j]), o = j - g, lit = o <= -0.999, open = j === jrActive && !lit;
         const r = Math.max(2.4, 3.6 * s);
         ctx.globalAlpha = cardsIn;
         if (lit) {
@@ -1053,7 +1057,8 @@
     const T = t * 0.001, mobile = w < 760;
 
     // ---- planet (speckled, slowly spinning) with two rings and a sun riding the tilted one
-    const R = Math.min(w, h) * (mobile ? 0.25 : 0.22), pcx = w * (mobile ? 0.7 : 0.62), pcy = h * 0.34, rot = T * 0.05;
+    // phones: a smaller planet tucked into the top-right corner, clear of the text column
+    const R = mobile ? w * 0.19 : Math.min(w, h) * 0.22, pcx = w * (mobile ? 0.84 : 0.62), pcy = h * (mobile ? 0.17 : 0.34), rot = T * 0.05;
     const cr = Math.cos(rot), sr = Math.sin(rot), tilt = 0.28, ct = Math.cos(tilt), st = Math.sin(tilt);
     const ringPt = (rg, a2) => {
       const ex = Math.cos(a2) * rg.rx * R, ey = Math.sin(a2) * rg.ry * R, c = Math.cos(rg.tilt), sn = Math.sin(rg.tilt);
@@ -1106,7 +1111,7 @@
     drawRings(true);
 
     // ---- dunes
-    const hor = h * (mobile ? 0.64 : 0.6), F = h * 0.95, camH = 1.05;
+    const hor = h * (mobile ? 0.8 : 0.6), F = h * 0.95, camH = 1.05;
     ctx.fillStyle = `rgb(${BONE})`;
     let seatX = w * (mobile ? 0.86 : 0.93), seatY = h;
     for (const d of DUNES) {
@@ -1127,8 +1132,9 @@
       seatY = hor + ((camH - hh * 0.55) * F) / Z * 0.42;
     }
 
-    // ---- seated figure on the dunes
-    const fh = h * (mobile ? 0.06 : 0.075);
+    // ---- seated figure on the dunes (desktop only: on a phone it would sit on top of the text column)
+    if (mobile) return;
+    const fh = h * 0.075;
     ctx.fillStyle = `rgb(${BONE})`;
     for (const [fx, fy, fa] of SEATED_PTS) { ctx.globalAlpha = fa * 0.9; ctx.fillRect(seatX + fx * fh, seatY - fy * fh, 1.1, 1.1); }
     ctx.globalAlpha = 1;

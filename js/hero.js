@@ -337,11 +337,12 @@
     const mobile = w < 760;
     const pH = mobile ? h * 0.62 : h * 0.94, pW = pH * portraitAspect;
     const pX0 = mobile ? (w - pW) / 2 : w * 0.64 - pW / 2, pY0 = mobile ? h * 0.08 : h * 0.04;
-    const kCube = mobile ? w * 0.2 : Math.min(w * 0.105, h * 0.15);
-    const kNet = Math.min(h * 0.76 / 8, w * (mobile ? 0.9 : 0.42) / 6);
+    const kCube = mobile ? w * 0.17 : Math.min(w * 0.105, h * 0.15);
+    // on phones the flat net sits in the lower half, under the "think out of the box" copy, instead of behind it
+    const kNet = mobile ? Math.min(h * 0.44 / 8, w * 0.8 / 6) : Math.min(h * 0.76 / 8, w * 0.42 / 6);
     K = lerp(kCube, kNet, m2);
     CX = lerp(w * 0.5, mobile ? w * 0.5 : w * 0.7, m2);
-    CY = lerp(h * (mobile ? 0.4 : 0.42), h * 0.54, m2);
+    CY = lerp(h * (mobile ? 0.46 : 0.42), h * (mobile ? 0.71 : 0.54), m2);
     let ry = 0.62 + Math.sin(now * 0.00017) * 0.16 + (mouse.nx - 0.5) * 0.45 + (1 - mP) * 1.4;
     ry = lerp(ry, -0.08 + (mouse.nx - 0.5) * 0.18, m2);
     const rx = lerp(0.48 + (mouse.ny - 0.5) * 0.22, 0.08 + (mouse.ny - 0.5) * 0.08, m2);

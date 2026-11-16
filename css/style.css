@@ -363,8 +363,10 @@ body.on-paper .hud-ticks i.on { background: var(--ember); }
   .ba > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); margin-top: 18px; }
   .case-art { aspect-ratio: 1; margin-top: 4vh; }
   .case-progress { display: none; }
-  .stats { grid-template-columns: 1fr 1fr; }
-  .stat { padding: 28px 16px 30px 0; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { padding: 28px 16px 30px 0; min-width: 0; }
+  .stat b { font-size: clamp(40px, 12.5vw, 60px); }
+  .stat p { font-size: 17px; margin-top: 20px; }
   .stat:not(:nth-child(3n+1)) { border-left: 0; }
   .stat:nth-child(even) { border-left: 1px solid var(--line); padding-left: 16px; }
   .quote { grid-template-columns: 1fr; }
@@ -572,3 +574,20 @@ body.on-paper .hud-ticks i.on { background: var(--ember); }
 
 /* =================================================================== hero: longer scroll story */
 .hero { height: 700vh; }
+
+
+/* =================================================================== phone fixes */
+@media (max-width: 760px) {
+  /* a soft backdrop under the fixed bar so text scrolling up never collides with the logo or buttons */
+  .bar::before { content: ""; position: absolute; inset: 0 0 -26px; z-index: -1; pointer-events: none; background: linear-gradient(var(--void) 50%, rgba(10, 10, 11, 0)); transition: opacity .5s; }
+  body.on-paper .bar::before { background: linear-gradient(var(--paper) 50%, rgba(233, 231, 225, 0)); }
+  /* the planet backdrop stays in the corner and quieter, so it never fights the text */
+  #ambient.on { opacity: .55; }
+  /* hero: "think out of the box" copy fits the top half; the flat net sits in the bottom half */
+  .hero-b { top: calc(var(--bar-h) + 7vh); }
+  .hero-b h2 { font-size: 40px; }
+  .hero-b2 { font-size: 27px; }
+  .hero-b3 { margin-top: 18px; }
+  /* about: room for the caption under the portrait frame */
+  .you-art { margin-bottom: 38px; }
+}
