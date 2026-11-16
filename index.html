@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Siddhartha Vasam | AI / ML Engineer</title>
+  <meta name="description" content="Siddhartha Vasam, an AI/ML engineer in Dubai building computer vision, NLP/LLM and AI automation systems." />
+  <meta name="author" content="Siddhartha Vasam" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Siddhartha Vasam | AI / ML Engineer" />
+  <meta property="og:description" content="Computer vision, NLP/LLM and AI automation systems, from raw data to working apps. Based in Dubai." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Siddhartha Vasam | AI / ML Engineer" />
+  <meta name="twitter:description" content="Computer vision, NLP/LLM and AI automation systems, from raw data to working apps." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="assets/portrait.webp" type="image/webp" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Siddhartha Vasam","jobTitle":"AI/ML Engineer","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"sameAs":["https://github.com/Vasamsiddhartha","https://linkedin.com/in/vasam-siddhartha"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@400;600;800&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@300,301,400,401&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css??v=1.1.3" />
+</head>
+<body>
+  <a class="skip-link" href="#sides">Skip to content</a>
+  <noscript><p class="noscript">This portfolio is drawn with JavaScript. Turn it on to see the animations; all the text below still works without it.</p></noscript>
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="bar">
+    <a href="#top" class="logo" aria-label="Siddhartha Vasam, home"><span class="logo-mark">SV</span></a>
+    <nav class="bar-r">
+      <a href="#contact" class="pill"><i class="ember-dot"></i>Let's talk</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span class="burger"><i></i><i></i></span>Menu</button>
+    </nav>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <ol class="menu-list">
+      <li><a href="#sides"><small>01</small>What I do</a></li>
+      <li><a href="#you"><small>02</small>About</a></li>
+      <li><a href="#how"><small>03</small>Journey</a></li>
+      <li><a href="#proof"><small>04</small>Projects</a></li>
+      <li><a href="#creds"><small>05</small>Credentials</a></li>
+      <li><a href="#contact"><small>06</small>Contact</a></li>
+    </ol>
+    <div class="menu-foot mono">
+      <a data-email href="#">email</a>
+      <span>Dubai, UAE</span>
+    </div>
+  </div>
+
+  <aside class="hud" aria-hidden="true">
+    <div class="hud-num"><b id="hudNum">01</b><span id="hudTotal">/09</span></div>
+    <div class="hud-name" id="hudName">Intro</div>
+    <div class="hud-ticks" id="hudTicks"></div>
+  </aside>
+  <div class="coords mono" aria-hidden="true">
+    <span id="cx">X 0.500</span><span id="cy">Y 0.500</span><span id="clock">00:00</span>
+  </div>
+
+  <main id="top">
+    <!-- ============ 01 HERO ============ -->
+    <section class="ch hero" data-ch="Intro" id="hero">
+      <div class="sticky">
+        <canvas id="heroCanvas" aria-label="A portrait of Siddhartha Vasam in particles that becomes a box and unfolds into six sides"></canvas>
+        <div class="fig mono">
+          <div><span class="dim">FIG.</span> <span id="figNo">01</span></div>
+          <div class="dim" id="figCap">The engineer, seen from outside</div>
+        </div>
+        <div class="state mono">
+          <div><span class="dim">OBJ.</span> Box</div>
+          <div><span class="dim">STATE</span> <i class="ember-dot"></i> Inspected</div>
+          <div><span class="dim">T+</span><span id="uptime">00:00:00</span></div>
+        </div>
+
+        <div class="hero-copy" id="heroA">
+          <h1>
+            <span class="serif line-a" data-blur>Siddhartha Vasam.</span>
+            <span class="dot line-b" data-scramble="I build things that think.">I build things that think.</span>
+          </h1>
+          <nav class="hero-links mono hero-links-a" aria-label="Profiles">
+            <a href="https://github.com/Vasamsiddhartha" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://linkedin.com/in/vasam-siddhartha" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="assets/Siddhartha-Vasam-CV.pdf" download>CV ↓</a>
+          </nav>
+        </div>
+        <div class="hero-side" id="heroSide">
+          <p class="serif"><em>Whatever the problem is: modelled, trained and shipped.</em></p>
+          <p class="mono dim">AI / ML Engineer &middot; Dubai, UAE</p>
+          <nav class="hero-links mono" aria-label="Profiles">
+            <a href="https://github.com/Vasamsiddhartha" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://linkedin.com/in/vasam-siddhartha" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="assets/Siddhartha-Vasam-CV.pdf" download>CV ↓</a>
+          </nav>
+        </div>
+        <div class="hero-copy hero-b" id="heroB">
+          <h2 class="serif">I think out of the <span class="boxed"><span>box</span></span></h2>
+          <p class="serif hero-b2"><em>for those who think out of the box</em></p>
+          <p class="mono dim hero-b3">FIG. 02 · The same box. Opened. Six sides. Laid flat.</p>
+        </div>
+
+        <div class="scroll-cue mono" id="scrollCue"><span>Scroll</span><i></i><span>Open the box</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SIX SIDES ============ -->
+    <section class="ch sides" data-ch="What I do" id="sides">
+      <div class="sticky">
+        <div class="sides-l">
+          <p class="eyebrow mono">Six sides of the work</p>
+          <h2 class="serif h-xl">Six sides of AI.<br /><em>One engineer on<br />every one.</em></h2>
+          <p class="lede">From pixels to prompts to pipelines, I take a problem from raw data to a system people actually use.</p>
+          <ol class="side-list" id="sideList">
+            <li><small class="mono">01</small><div><b>Computer vision</b><span>YOLOv8, Mask R-CNN, pose and 3D reconstruction.</span></div></li>
+            <li><small class="mono">02</small><div><b>NLP &amp; LLMs</b><span>Transformers, RAG, LoRA fine-tuning, OpenAI API.</span></div></li>
+            <li><small class="mono">03</small><div><b>Machine learning</b><span>PyTorch, TensorFlow, scikit-learn, XGBoost.</span></div></li>
+            <li><small class="mono">04</small><div><b>AI automation</b><span>n8n, Zapier, UiPath and WhatsApp workflows.</span></div></li>
+            <li><small class="mono">05</small><div><b>Data &amp; evaluation</b><span>F1, precision/recall, visualisation, OCR.</span></div></li>
+            <li><small class="mono">06</small><div><b>Product interfaces</b><span>Streamlit, React, TypeScript.</span></div></li>
+          </ol>
+        </div>
+        <div class="sides-r">
+          <canvas class="net-fig" id="netFig" aria-hidden="true"></canvas>
+          <div class="net" id="net">
+            <canvas class="net-spark" id="netSpark" aria-hidden="true"></canvas>
+            <div class="tile" style="grid-area:1/2"><span class="mono">01 Vision</span>
+              <svg viewBox="0 0 100 80"><path d="M10 40C24 18 76 18 90 40C76 62 24 62 10 40Z"/><circle cx="50" cy="40" r="13"/><circle cx="50" cy="40" r="4"/><path d="M14 10h12M14 10v10M86 10H74M86 10v10M14 70h12M14 70V60M86 70H74M86 70V60"/></svg></div>
+            <div class="tile" style="grid-area:2/1"><span class="mono">02 NLP</span>
+              <svg viewBox="0 0 100 80"><rect x="12" y="12" width="56" height="36" rx="8"/><path d="M24 48l-4 12 14-12M22 24h36M22 32h28M22 40h18"/><rect x="50" y="38" width="38" height="26" rx="7"/><path d="M60 50h18"/></svg></div>
+            <div class="tile" style="grid-area:2/2"><span class="mono">03 ML</span>
+              <svg viewBox="0 0 100 80"><circle cx="20" cy="20" r="4"/><circle cx="20" cy="40" r="4"/><circle cx="20" cy="60" r="4"/><circle cx="50" cy="28" r="4"/><circle cx="50" cy="52" r="4"/><circle cx="80" cy="40" r="4"/><path d="M24 20L46 28M24 20L46 52M24 40L46 28M24 40L46 52M24 60L46 28M24 60L46 52M54 28L76 40M54 52L76 40"/></svg></div>
+            <div class="tile" style="grid-area:2/3"><span class="mono">04 Automation</span>
+              <svg viewBox="0 0 100 80"><circle cx="40" cy="36" r="14"/><circle cx="40" cy="36" r="22" class="teeth"/><circle cx="68" cy="56" r="8"/><circle cx="68" cy="56" r="13" class="teeth"/></svg></div>
+            <div class="tile" style="grid-area:3/2"><span class="mono">05 Data</span>
+              <svg viewBox="0 0 100 80"><path d="M14 8v62h76"/><path d="M24 62V44M38 62V30M52 62V38M66 62V20M80 62V28"/><path d="M24 36L38 22L52 30L66 12L80 20"/></svg></div>
+            <div class="tile" style="grid-area:4/2"><span class="mono">06 Product</span>
+              <svg viewBox="0 0 100 80"><rect x="12" y="10" width="76" height="58" rx="4"/><path d="M12 22h76M20 16h2M26 16h2M32 16h2M22 34h22M22 42h22M22 50h22M52 32h28v26H52z"/></svg></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 ABOUT ============ -->
+    <section class="ch you" data-ch="About" id="you">
+      <div class="wrap">
+        <p class="eyebrow mono">About</p>
+        <h2 class="serif h-xl" data-reveal>Who's <em>behind the box?</em></h2>
+        <div class="you-grid">
+          <ol class="you-tabs" role="tablist" id="youTabs">
+            <li><button role="tab" aria-selected="true" data-i="0"><small class="mono">01</small>Who I am</button></li>
+            <li><button role="tab" aria-selected="false" data-i="1"><small class="mono">02</small>What I do now</button></li>
+            <li><button role="tab" aria-selected="false" data-i="2"><small class="mono">03</small>How I work</button></li>
+            <li><button role="tab" aria-selected="false" data-i="3"><small class="mono">04</small>Off the clock</button></li>
+          </ol>
+          <figure class="frame you-art">
+            <canvas class="dotart" id="youArt"></canvas>
+            <figcaption class="mono" id="youCap"></figcaption>
+          </figure>
+          <dl class="you-rows" id="youRows">
+            <div><dt class="mono">In short</dt><dd class="serif dim2"></dd></div>
+            <div><dt class="mono">In practice</dt><dd class="serif"></dd></div>
+            <div><dt class="mono"><i class="ember-dot"></i>What you get</dt><dd class="serif"><em></em></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 JOURNEY ============ -->
+    <section class="ch how" data-ch="Journey" id="how">
+      <div class="sticky">
+        <div class="jr-sky">
+          <canvas id="howBack" aria-hidden="true"></canvas>
+          <canvas id="howCanvas" aria-label="An engineer at a laptop inside an orbit; each stop of the journey rides the orbit into view and leaves a glowing milestone behind"></canvas>
+        </div>
+        <div class="jr-head">
+          <h2 class="sr-only">From campus to production.</h2>
+          <p class="eyebrow mono">Journey · campus to production</p>
+          <p class="jr-count mono"><b id="jrNo">01</b> / 06 <span class="jr-ticks" id="jrTicks"><i></i><i></i><i></i><i></i><i></i><i></i></span></p>
+        </div>
+        <div class="jr-stage" id="jrStage">
+          <ol class="jr-cards" id="jrCards">
+            <li class="jr-card" data-bead="SSC">
+              <div class="jr-mini"><small class="mono">01 · 2018 – 2019</small><b>SSC</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>01 / 06 · Education</span><span><i class="ember-dot"></i>2018 – 2019</span></p>
+                <h3 class="serif">SSC</h3>
+                <p class="jr-org">Sri Chaitanya High School</p>
+                <p class="jr-txt">Secondary School Certificate, finished with a CGPA of 9.0.</p>
+              </div>
+            </li>
+            <li class="jr-card" data-bead="Inter">
+              <div class="jr-mini"><small class="mono">02 · 2019 – 2021</small><b>Intermediate, MPC</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>02 / 06 · Education</span><span><i class="ember-dot"></i>2019 – 2021</span></p>
+                <h3 class="serif">Intermediate, MPC</h3>
+                <p class="jr-org">Sri Chaitanya Junior College</p>
+                <p class="jr-txt">Maths, Physics and Chemistry, finished with 92.3%.</p>
+              </div>
+            </li>
+            <li class="jr-card" data-bead="B.Tech">
+              <div class="jr-mini"><small class="mono">03 · 2021 – 2025</small><b>B.Tech, AI/ML</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>03 / 06 · Education</span><span><i class="ember-dot"></i>2021 – 2025</span></p>
+                <h3 class="serif">B.Tech, Computer Science (AI/ML)</h3>
+                <p class="jr-org">Parul University, Vadodara</p>
+                <p class="jr-txt">Computer Science Engineering with a specialisation in AI and machine learning. CGPA 7.3.</p>
+              </div>
+            </li>
+            <li class="jr-card" data-bead="Slash Mark">
+              <div class="jr-mini"><small class="mono">04 · Dec 2024</small><b>AI Intern, Slash Mark</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>04 / 06 · Experience</span><span><i class="ember-dot"></i>Dec 2024</span></p>
+                <h3 class="serif">AI Intern</h3>
+                <p class="jr-org">Slash Mark</p>
+                <p class="jr-txt">A CNN traffic-light classifier in TensorFlow, 92%+ accurate on 2,400+ images; augmentation added 15% accuracy and cut latency 20%.</p>
+              </div>
+            </li>
+            <li class="jr-card" data-bead="Clomotech">
+              <div class="jr-mini"><small class="mono">05 · May 2025</small><b>AI/ML Intern, Clomotech</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>05 / 06 · Experience</span><span><i class="ember-dot"></i>May 2025</span></p>
+                <h3 class="serif">AI/ML Intern</h3>
+                <p class="jr-org">Clomotech</p>
+                <p class="jr-txt">Occluded person re-identification using height as a biometric cue, with 15% better height estimates and 30% faster 3D reconstruction.</p>
+              </div>
+            </li>
+            <li class="jr-card" data-bead="1XL Infra">
+              <div class="jr-mini"><small class="mono">06 · Jan 2026 → now</small><b>AI Automation Engineer, 1XL Infra</b></div>
+              <div class="jr-full">
+                <p class="jr-top mono"><span>06 / 06 · Experience</span><span><i class="ember-dot"></i>Jan 2026 → now</span></p>
+                <h3 class="serif">AI Automation Engineer</h3>
+                <p class="jr-org">1XL Infra</p>
+                <p class="jr-txt">Property-management software covering leases, tenants, invoices, channel partners, leads and site visits, plus WhatsApp lead automation.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 PROJECTS ============ -->
+    <section class="ch proof" data-ch="Projects" id="proof">
+      <div class="wrap proof-head">
+        <p class="eyebrow mono">Selected work</p>
+        <h2 class="serif h-xl" data-reveal>Before. <em>After.</em></h2>
+        <p class="lede" data-reveal>Three projects and two internship builds. Same pattern every time: messy input goes in, a working system comes out.</p>
+      </div>
+
+      <div class="proof-stage" id="proofStage">
+        <div class="sticky proof-sticky">
+          <div class="pc-l">
+            <p class="mono case-no"><b id="pcNo">Project 01</b> <span class="dim">/ 05</span> <span class="dim" id="pcDate"></span></p>
+            <h3 class="serif pc-title" id="pcTitle"><span class="on"></span><span></span></h3>
+            <canvas class="pc-value" id="pcValue" aria-hidden="true"></canvas>
+            <div class="ba pc-ba" id="pcBa">
+              <div><p class="mono dim">Before</p><p class="ba-v mono" id="pcBv"></p><p id="pcBt"></p></div>
+              <div><p class="mono"><i class="ember-dot"></i>After</p><p class="ba-v mono" id="pcAv"></p><p id="pcAt"></p></div>
+            </div>
+            <div class="case-meta"><ul class="chips mono" id="pcChips"></ul><a class="gh mono" id="pcLink" href="#" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+            <div class="case-progress show" id="caseProg"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <figure class="frame pc-art"><canvas class="dotart" id="pcArt"></canvas><figcaption class="mono" id="pcCap"></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 NUMBERS ============ -->
+    <section class="ch numbers" data-ch="Numbers" id="numbers" data-amb="1">
+      <div class="wrap">
+        <p class="eyebrow mono">In numbers</p>
+        <h2 class="serif h-xl" data-reveal>Results, <em>not adjectives.</em></h2>
+        <div class="stats">
+          <div class="stat"><b class="dot">92%</b><p class="serif">detection accuracy on a live webcam</p><small class="mono">Waste detection</small></div>
+          <div class="stat"><b class="dot">85%+</b><p class="serif">of inbox triage automated</p><small class="mono">Inbox summarizer</small></div>
+          <div class="stat"><b class="dot">65%</b><p class="serif">more relevant summaries after fine-tuning</p><small class="mono">LoRA fine-tune</small></div>
+          <div class="stat"><b class="dot">30%</b><p class="serif">less compute for 3D reconstruction</p><small class="mono">Clomotech</small></div>
+          <div class="stat"><b class="dot">2,400+</b><p class="serif">images processed and augmented</p><small class="mono">Slash Mark</small></div>
+          <div class="stat"><b class="dot">3</b><p class="serif">AI roles since December 2024</p><small class="mono">Slash Mark → Clomotech → 1XL</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 CREDENTIALS ============ -->
+    <section class="ch creds" data-ch="Credentials" id="creds" data-amb="1">
+      <div class="wrap">
+        <p class="eyebrow mono">On paper</p>
+        <h2 class="serif h-xl" data-reveal>Certified. <em>Schooled.</em></h2>
+        <div class="creds-grid">
+          <div class="cred-col">
+            <p class="mono dim">Certifications</p>
+            <ul class="cred-list">
+              <li><a href="https://drive.google.com/file/d/187igTDf44_IthnIgc6ymN-d0V3RfGExz/view" target="_blank" rel="noopener"><span class="serif">Prompt Engineering</span><small class="mono">One Million Prompters ↗</small></a></li>
+              <li><a href="https://drive.google.com/file/d/1KtZ1Fdh25DYPUnivU1jn6Y1wsXhP_0rT/view" target="_blank" rel="noopener"><span class="serif">Data Visualization</span><small class="mono">Accenture ↗</small></a></li>
+              <li><a href="https://drive.google.com/file/d/1KsScWoc_mEM67b3CbwRo6FNSwPTS-8RG/view" target="_blank" rel="noopener"><span class="serif">AI/ML Internship</span><small class="mono">Codetech IT Solutions ↗</small></a></li>
+              <li><a href="https://drive.google.com/file/d/12msTdqYQUEMwFb-PBq3jOn2fPbYPUkEg/view" target="_blank" rel="noopener"><span class="serif">AI Internship</span><small class="mono">Slash Mark ↗</small></a></li>
+            </ul>
+          </div>
+          <div class="cred-col">
+            <p class="mono dim">Education</p>
+            <ul class="cred-list">
+              <li><div><span class="serif">B.Tech, Computer Science (AI/ML)</span><small class="mono">Parul University · 2021–2025 · CGPA 7.3</small></div></li>
+              <li><div><span class="serif">Intermediate, MPC</span><small class="mono">Sri Chaitanya Junior College · 2019–2021 · 92.3%</small></div></li>
+              <li><div><span class="serif">SSC</span><small class="mono">Sri Chaitanya High School · 2018–2019 · CGPA 9.0</small></div></li>
+            </ul>
+            <p class="mono dim lang-h">Languages</p>
+            <p class="langs serif">English <em>fluent</em> · Hindi <em>fluent</em> · Telugu <em>native</em></p>
+          </div>
+        </div>
+        <div class="toolkit">
+          <p class="mono dim">Toolkit</p>
+          <ul class="chips mono big">
+            <li>Python</li><li>TypeScript</li><li>React</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>XGBoost</li><li>YOLOv8</li><li>OpenCV</li><li>Hugging Face</li><li>spaCy</li><li>OpenAI API</li><li>LLMs</li><li>RAG</li><li>Fine-tuning</li><li>OCR</li><li>Streamlit</li><li>n8n</li><li>Zapier</li><li>UiPath</li><li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 FAQ ============ -->
+    <section class="ch faq" data-ch="Questions" id="faq" data-amb="1">
+      <div class="wrap faq-grid">
+        <div>
+          <p class="eyebrow mono">Straight answers</p>
+          <h2 class="serif h-xl" data-reveal>Sometimes the best model is the <em class="gridbox">simplest</em>.</h2>
+          <p class="lede">A simple model that ships beats a clever one that never leaves the notebook.</p>
+        </div>
+        <div>
+          <h3 class="serif h-md">Fair <em>questions.</em></h3>
+          <div class="acc" id="acc">
+            <details open><summary class="serif">What roles are you looking for?</summary><p>AI/ML engineering: computer vision, NLP and LLM systems, and AI automation that solves real business problems.</p></details>
+            <details><summary class="serif">Where are you based?</summary><p>Dubai, UAE.</p></details>
+            <details><summary class="serif">What's your core stack?</summary><p>Python with PyTorch, TensorFlow, scikit-learn, YOLOv8 and Hugging Face; n8n and Zapier for automation; Streamlit and React for interfaces.</p></details>
+            <details><summary class="serif">Can you take a model all the way to an app?</summary><p>Yes. My projects ship as working tools: live webcam detection, Streamlit dashboards, and automation running inside real property-management software.</p></details>
+            <details><summary class="serif">Which languages do you speak?</summary><p>English and Hindi fluently, Telugu natively.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09 EXIT TUNNEL ============ -->
+    <section class="ch exit" data-ch="Say hi" id="exit">
+      <div class="sticky">
+        <canvas id="exitCanvas"></canvas>
+        <div class="exit-copy" id="exitCopy">
+          <h2 class="serif">For those who think <em>out of the box</em>.</h2>
+          <p class="mono">There is a door. It is open.</p>
+        </div>
+        <div class="exit-fade" id="exitFade"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact paper" id="contact" data-ch="Say hi">
+      <div class="wrap">
+        <h2 class="serif mega">Let's build.</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="mono small">So, what are you working on?</p>
+            <div class="typer serif"><em id="typer"></em><i class="caret"></i></div>
+            <div class="cta-row">
+              <a class="btn-dark mono" data-email data-subject="Hello Siddhartha" href="#">Email me <span>→</span></a>
+              <a class="btn-line mono" href="assets/Siddhartha-Vasam-CV.pdf" download>Download CV ↓</a>
+            </div>
+            <p class="small note">
+              <a href="https://linkedin.com/in/vasam-siddhartha" target="_blank" rel="noopener">LinkedIn ↗</a> ·
+              <a href="https://github.com/Vasamsiddhartha" target="_blank" rel="noopener">GitHub ↗</a> · Based in Dubai, UAE.
+            </p>
+          </div>
+          <ul class="prompts mono" id="prompts">
+            <li>An AI/ML role on your team…</li>
+            <li>A computer vision problem…</li>
+            <li>Something worth automating…</li>
+            <li>A model that needs fine-tuning…</li>
+            <li>Just saying hi…</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot paper">
+    <div class="wrap">
+      <div class="foot-top">
+        <canvas id="footMark" aria-label="SV"></canvas>
+        <p class="foot-tag"><span class="serif">Siddhartha Vasam.</span><span class="dot">AI / ML Engineer.</span></p>
+      </div>
+      <div class="foot-cols">
+        <div><p class="mono dim">Six sides</p><a href="#sides">Computer vision</a><a href="#sides">NLP &amp; LLMs</a><a href="#sides">Machine learning</a><a href="#sides">AI automation</a><a href="#sides">Data &amp; evaluation</a><a href="#sides">Product interfaces</a></div>
+        <div><p class="mono dim">Site</p><a href="#you">About</a><a href="#how">Journey</a><a href="#proof">Projects</a><a href="#creds">Credentials</a><a href="#faq">Questions</a></div>
+        <div><p class="mono dim">Contact</p><a data-email href="#">Email</a><a href="https://linkedin.com/in/vasam-siddhartha" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/Vasamsiddhartha" target="_blank" rel="noopener">GitHub ↗</a><a href="assets/Siddhartha-Vasam-CV.pdf" download>CV (PDF) ↓</a></div>
+        <div><p class="mono dim">Based in</p><span>Dubai</span><span>United Arab Emirates</span><p class="mono dim small" id="footClock"></p></div>
+      </div>
+      <div class="foot-bot mono">
+        <span>© <span id="yr">2026</span> Siddhartha Vasam</span>
+        <span>Drawn with 42,000 particles</span>
+        <a href="#top">Back to the top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/hero.js??v=1.1.3"></script>
+  <script src="js/main.js??v=1.1.3"></script>
+</body>
+</html>
